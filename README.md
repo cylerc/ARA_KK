@@ -11,7 +11,7 @@ Results described in:
 
 Conrad, C., Franz, E., Green, E. and Jones, E.L. (in review) New Radiocarbon Dates from Prehistoric Non Nok Tha, Don Kok Pho and Don Pa Daeng, Upper Nam Phong Watershed, Khon Kaen Province, Northeast Thailand. Archaeological Research in Asia.
 
-NOTES All data required to perform the analyses can be found in (Conrad et al. 2020). The script was run using R version 3.1.1 on Mac OS X 10.8.5
+NOTES All data required to perform the analyses can be found in (Conrad et al. 2020). The script was run using R version 4.0.0 & RStudio version 1.3.959 on Mac OS Catalina 10.15.6
 
 Reference: Conrad, Cyler N., Eden Franz, Ernestene Green and Emily Lena Jones. 2020. Radiocarbon and Contextual Data for Non Nok Tha, Don Kok Pho and Don Pa Daeng, Khon Kaen Province, Northeast Thailand. https://digitalrepository.unm.edu/anthro_data/10/
 
