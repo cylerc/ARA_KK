@@ -1,0 +1,99 @@
+## R script for Khon Kaen Province, Thailand, radiocarbon data.
+
+By Cyler Conrad, Environmental Stewardship, Los Alamos National Laboratory, cylerc@lanl.gov & Department of Anthropology, University of New Mexico, cylerc@unm.edu 
+
+This document contain R code to reproduce the plots and statistical analysis presented in:
+
+> Conrad, C., Franz, E., Green, E. and Jones, E.L. (in review) New Radiocarbon Dates from Prehistoric Non Nok Tha, Don Kok Pho and Don Pa Daeng, Upper Nam Phong Watershed, Khon Kaen Province, Northeast Thailand. Archaeological Research in Asia.
+
+NOTES All data required to perform the analyses can be found in (Conrad et al. 2020). The script was run using R version 4.0.0 & RStudio version 1.3.959 on Mac OS Catalina 10.15.6
+
+Reference: 
+> Conrad, Cyler N., Eden Franz, Ernestene Green and Emily Lena Jones. 2020. Radiocarbon and Contextual Data for Non Nok Tha, Don Kok Pho and Don Pa Daeng, Khon Kaen Province, Northeast Thailand. https://digitalrepository.unm.edu/anthro_data/10/
+
+Details of the computational environment and software dependencies are listed at the end of this document. 
+
+```{r setup}
+# set the base directory for knitr to the directory above this one
+# install.packages(c("Bchron", "ggplot2"))
+library(Bchron)
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load_libraries, message = FALSE, warning = FALSE}
+dates<-read.csv("data.csv", stringsAsFactors = FALSE, check.names = FALSE)
+dates
+```
+
+```{r radiocarbon calibration and plot}
+kk = BchronCalibrate(ages=dates$Age, 
+                        ageSds=dates$SD, 
+                        positions=dates$Positions, 
+                        calCurves=rep('intcal20',length(dates$Age)))
+
+plot(kk, ageScale = 'bc', scaleReverse = FALSE, dateLabels=FALSE, fillCol = "darkgrey") +
+  labs(x = 'Age (BC/AD)',
+       y = 'Site/Context')+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_rect(colour="white", fill="white"),
+        strip.text.x = element_text(colour = "black", size = 10),
+        axis.title.x = element_text(colour="black", size=10),
+        axis.text.x  = element_text(colour="black", vjust=0.5, size=10),
+        axis.title.y = element_blank(),
+        axis.text.y  = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.background = element_blank(), 
+        legend.position = "none",
+        axis.line = element_line(colour = "black"))+
+  geom_vline(xintercept=0, linetype="dashed")+
+  annotate("text", x = -3000, y = 150, label = "NP8-1-5")+
+  annotate("text", x = -3000, y = 300, label = "NP6-4-4")+
+  annotate("text", x = -3000, y = 450, label = "NP6-4-9")+
+  annotate("text", x = -3000, y = 600, label = "NNC-1B-3")+
+  annotate("text", x = -3000, y = 750, label = "NNC-1B-3/4")+
+  annotate("text", x = -3000, y = 900, label = "NNC-1B-5")+
+  annotate("text", x = -3000, y = 1050, label = "NNC-1B-6/7")+
+  annotate("text", x = -3000, y = 1200, label = "NNC-1B-7")+
+  annotate("text", x = -3000, y = 1350, label = "NNC-1A-7")+
+  annotate("text", x = -3000, y = 1500, label = "NPK-1-III")+
+  annotate("text", x = -3000, y = 1650, label = "NPK-1-III")+
+  annotate("text", x = -3000, y = 1800, label = "NPK-1-V-B5")+
+  annotate("text", x = -3000, y = 1950, label = "NPK-1-V-B5")+
+  annotate("text", x = -3000, y = 2100, label = "NPK-2-V-B13")+
+  annotate("text", x = -3000, y = 2250, label = "DK-B8")+
+  annotate("text", x = -3000, y = 2400, label = "DK-EQ-5")+
+  annotate("text", x = -3000, y = 2550, label = "DK-NQ-5")+
+  annotate("text", x = -3000, y = 2700, label = "DK-WQ-8/9")+
+  annotate("text", x = -3000, y = 2850, label = "DK-NQ-4")+
+  annotate("text", x = -3000, y = 3000, label = "DK-NQ-6")+
+  annotate("text", x = -3000, y = 3150, label = "NC-D2-4/5")+
+  annotate("text", x = -3000, y = 3300, label = "NC-D3-13")+
+  annotate("text", x = -3000, y = 3450, label = "NC-D3-14")+
+  annotate("text", x = -3000, y = 3600, label = "NC-D1-12")+
+  annotate("text", x = -3000, y = 3750, label = "NC-D2-17/18")+
+  annotate("text", x = -3000, y = 3900, label = "NC-D4-19/20")+
+  annotate("text", x = -3000, y = 4050, label = "NC-D3-30")+
+  annotate("text", x = -3000, y = 4200, label = "NC-D1-35/36")+
+  annotate("text", x = -3000, y = 4350, label = "NC-D1-38/39")+
+  annotate("text", x = -3000, y = 4500, label = "NC-D1-38/39")+
+  annotate("text", x = -3000, y = 4650, label = "NC-D1-41/42")
+```
+
+```{r session_info}
+# Computational environment and software dependencies for this analysis.
+sessionInfo()
+```
+
+License:
+
+MIT License
+
+Copyright (c) 2020 Cyler Conrad
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

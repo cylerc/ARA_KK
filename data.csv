@@ -1,0 +1,32 @@
+Site,Square,Layer,Material ,Age,SD,Laboratory Number,Positions,Label
+Don Pa Daeng (NP8),1,5,Sus enamel apatite,1730,25,UGAMS-41389,150,NP8-1-5
+Don Kok Pho (NP6),4,4,Charcoal,1450,100,GaK-653,300,NP6-4-4
+Don Kok Pho (NP6),4,9,B. bubalis enamel apatite,1900,25,UGAMS-41388,450,NP6-4-9
+Non Nong Chik,1B,Post-Layer 3 burial,,2900,120,-,600,NNC-1B-3
+Non Nong Chik,1B,Layer 3 or 4,,2160,270,-,750,NNC-1B-3/4
+Non Nong Chik,1B,Layer 5,,2120,75,-,900,NNC-1B-5
+Non Nong Chik,1B,Layer 6 and 7,,2340,76,-,1050,NNC-1B-6/7
+Non Nong Chik,1B,Layer 7,,2830,105,-,1200,NNC-1B-7
+Non Nong Chik,1A,Layer 7,,3180,95,-,1350,NNC-1A-7
+Non Pa Kluay,1,Level III,Charcoal,1865,75,-,1500,NPK-1-III
+Non Pa Kluay,1,Level III,Charcoal,2155,65,-,1650,NPK-1-III
+Non Pa Kluay,1,"Level V, Burial NPK-5",Charcoal,2860,95,-,1800,NPK-1-V-B5
+Non Pa Kluay,1,"Level V, Burial NPK-5",Charcoal,2870,110,-,1950,NPK-1-V-B5
+Non Pa Kluay,2,"Level V, Burial NPK-13",Charcoal,3385,370,-,2100,NPK-2-V-B13
+Don Klang,,Under Burial 8,Charcoal and soil,2140,60,P-2416,2250,DK-B8
+Don Klang,EQ,Layer 5,Charcoal and soil,1870,190,P-2417,2400,DK-EQ-5
+Don Klang,NQ,Layer 5,Soil and charcoal,1900,200,P-2448,2550,DK-NQ-5
+Don Klang,WQ,Layer 8 and 9,Soil and charcoal,2440,50,P-2674,2700,DK-WQ-8/9
+Don Klang,NQ,Layer 4,Soil and charcoal,1920,50,P-2675,2850,DK-NQ-4
+Don Klang,NQ,Layer 6,Charcoal and soil,2040,50,P-2694,3000,DK-NQ-6
+Non Chai,D2,Level 4/5,Charcoal,2040,70,NZ-4811,3150,NC-D2-4/5
+Non Chai,D3,Level 13,Charcoal,1760,241,NED-1,3300,NC-D3-13
+Non Chai,D3,Level 14,Charcoal,1850,65,NZ-4813,3450,NC-D3-14
+Non Chai,D1,Level 12,Charcoal,2080,200,NZ-4815,3600,NC-D1-12
+Non Chai,D2,Level 17/18,Charcoal,2040,70,NZ-4812,3750,NC-D2-17/18
+Non Chai,D4,Level 19/20,Charcoal,2140,70,NZ-4816,3900,NC-D4-19/20
+Non Chai,D3,Level 30,Charcoal,2150,90,NZ-4818,4050,NC-D3-30
+Non Chai,D1,Level 35/36,Charcoal,2200,70,NZ-4817,4200,NC-D1-35/36
+Non Chai,D1,Level 38/39,Charcoal,1520,235,NED-2,4350,NC-D1-38/39
+Non Chai,D1,Level 38/39,Charcoal,2270,70,NZ-4819,4500,NC-D1-38/39
+Non Chai,D1,Level 41/42,Charcoal,3490,160,NZ-4814,4650,NC-D1-41/42
