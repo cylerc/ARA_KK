@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r load_libraries, message = FALSE, warning = FALSE}
-dates<-read.csv("data.csv", stringsAsFactors = FALSE, check.names = FALSE)
+dates<-read.csv("data/data.csv", stringsAsFactors = FALSE, check.names = FALSE)
 dates
 ```
 
@@ -78,7 +78,8 @@ plot(kk, ageScale = 'bc', scaleReverse = FALSE, dateLabels=FALSE, fillCol = "dar
   annotate("text", x = -3000, y = 4200, label = "NC-D1-35/36")+
   annotate("text", x = -3000, y = 4350, label = "NC-D1-38/39")+
   annotate("text", x = -3000, y = 4500, label = "NC-D1-38/39")+
-  annotate("text", x = -3000, y = 4650, label = "NC-D1-41/42")
+  annotate("text", x = -3000, y = 4650, label = "NC-D1-41/42")+
+ggsave("figures/Fig9.pdf", width = 8.5, height = 11, units = "in")
 ```
 
 ```{r session_info}
